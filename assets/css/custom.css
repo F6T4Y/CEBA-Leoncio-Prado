@@ -1,0 +1,80 @@
+/*------------------------------------------------------------------
+  [Color codes]
+
+  Main 1:    #4CAF50        Verde
+  Back 1:    #A5D6A7        Verde Suave 
+ 
+
+  Dark 1:    #000000        Negro
+  !    1:    #FFFFFF        Blanco
+
+
+  Gray 1:    #424242        Gris Oscuro
+  Golden:    #FFD700        Dorado
+    
+  <img src="https://picsum.photos/200/300" alt="Imagen-Random">
+  
+  -------------------------------------------------------------------*/
+
+nav {
+  background-color: #4CAF50;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Utiliza flexbox para disposición horizontal */
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  color: #000000;
+  padding: 10px 20px; /* Añade un poco de espacio horizontal */
+  text-decoration: none;
+}
+
+nav ul ul {
+  display: none; /* Oculta los submenús inicialmente */
+  position: absolute; /* Asegura que el submenú se posicione correctamente */
+  left: 0;
+  top: 100%;
+  background-color: #444;
+}
+
+nav ul li:hover > ul {
+  display: block; /* Muestra el submenú al pasar el mouse */
+}
+
+nav ul li ul li a {
+  padding: 10px;
+  color: white;
+}
+
+header {
+  display: flex; /* Utiliza flexbox para el layout */
+  justify-content: space-between; /* Espacia los elementos al máximo */
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 10px; /* Espaciado interno */
+  color: #000000;
+  background-color: #4CAF50; /* Color de fondo (opcional) */
+}
+
+header div {
+  flex: 2; /* Permite que cada div ocupe el mismo espacio */
+}
+
+header ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el padding */
+  margin: 0; /* Elimina el margen */
+  display: flex; /* Disposición horizontal para los elementos de la lista */
+}
+
+header ul li {
+  margin: 0 10px; /* Espacio entre los elementos de la lista */
+}

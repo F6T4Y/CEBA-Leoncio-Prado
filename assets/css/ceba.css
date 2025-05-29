@@ -1,0 +1,692 @@
+/*------------------------------------------------------------------
+  [Color codes]
+
+  Main 1:    #4CAF50        Verde
+  Back 1:    #A5D6A7        Verde Suave 
+ 
+
+  Dark 1:    #000000        Negro
+  !    1:    #FFFFFF        Blanco
+
+
+  Gray 1:    #424242        Gris Oscuro
+  Golden:    #FFD700        Dorado
+    
+  <img src="https://picsum.photos/200/300" alt="Imagen-Random">
+  
+  -------------------------------------------------------------------*/
+
+/* Estilos generales */
+* {
+  pad: 0;
+  box-sizing: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  font-family: Arial;
+  color: #333;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0px;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos del encabezado */
+#encabezado {
+  background-color: #000000;
+  color: #ffffff;
+  pad: 1em;
+  flex: 2;
+}
+
+.encabezado-letter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list-encabezado {
+  display: flex;
+  list-style: none;
+  font-family: Impact, sans-serif;
+  font-size: large;
+}
+
+.logo-link {
+  font-family: Impact, sans-serif;
+  font-size: 45px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#contactanos {
+  font-family: Impact, sans-serif;
+  font-size: 45px;
+  text-decoration: none;
+  color: #4caf50;
+  transition: all 0.3s ease;
+}
+
+#contactanos:hover {
+  font-size: 50px;
+  color: gold;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.encabezado-social-social-list {
+  display: flex;
+  list-style: none;
+  padding: 0px 25px;
+  box-shadow: #45a049;
+  background-color: #ffffff;
+  border: #ffffff 5px solid;
+  border-radius: 50px;
+}
+
+.social-item {
+  margin: 10px;
+  margin-right: 30px;
+  justify-content: flex-start;
+  transition: all 1.5s ease-in;
+}
+
+.social-item :hover {
+  transform: scale(1.5);
+}
+
+/* Estilos del menú de navegación */
+#barra-navegacion {
+  background-color: #555;
+  padding: 10px 0;
+  flex: 1;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 30px;
+  justify-content: space-around;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link,
+.sub-link {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.sub-link:hover {
+  color: #ffd700;
+}
+
+.sub-menu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 10px 0;
+  background-color: #555;
+  z-index: 1000;
+  border: #000000 solid 3px;
+}
+
+.nav-item:hover .sub-menu {
+  display: block;
+}
+
+.sub-item {
+  padding: 5px 15px;
+  border: #000000 solid 1px;
+  margin: 15px 2px;
+  border-radius: 3px;
+}
+
+/* Estilos del contenido principal */
+main {
+  padding: 10px;
+}
+
+/* Estilos del formulario */
+.form-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.form-title {
+  text-align: center;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  font-size: medium;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+  letter-spacing: 2px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.form-button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #45a049;
+}
+
+
+/*main cronograma classes */
+#main-cronograma-clases {
+  max-width: 800px;
+  margin: auto;
+  background: #fff; 
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px; 
+}
+
+/* títulos */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+/* tablas */
+table {
+  width: 100%; 
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px; 
+  text-align: center;
+  border: 1px solid black;
+}
+
+th {
+  color: black;
+  background-color: #dad8d8;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9; 
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1; 
+}
+
+article {
+  margin-bottom: 40px; 
+}
+
+
+
+
+/*main cronograma classes */
+
+#main-cronograma-matricula {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.titulo-matricula {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.schedule-container {
+    margin-top: 10px;
+}
+
+.schedule-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.schedule-item h3 {
+    margin: 0 0 10px;
+}
+
+
+
+/*main index*/
+#main-index {
+    max-width: 900px;
+    margin: auto; 
+    background: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+}
+
+.intro {
+    margin: 3px 0px;
+    padding: 0;
+    background-color: #000000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.intro h1 {
+    
+    color: #4CAF50; 
+    font-size: 80px;
+    font-family: Impact, sans-serif;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-weight: bold;
+}
+
+
+.programs li, .workflow li {
+    margin-bottom: 15px; 
+}
+
+
+.vision-mission-values {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.vision, .mission, .values {
+    margin: 20px 0; 
+    padding: 15px; 
+    background: #f9f9f9; 
+    border-radius: 5px;
+}
+
+
+.comentarios {
+    margin-top: 30px;
+}
+
+
+.review {
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    padding: 15px; 
+    margin-bottom: 15px; 
+    background: #fff; 
+}
+
+.review h5 {
+    margin-top: 10px; 
+    font-weight: bold; 
+}
+
+
+.rating img {
+    margin-right: 2px; 
+}
+
+
+
+
+
+
+
+
+/* main modalidad  */
+#main-modalidad {
+    max-width: 900px; 
+    margin: auto; 
+    background: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+}
+
+
+.modalidad-ensenanza h1 {
+    text-align: center;
+    font-family: Impact, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-bottom: 20px; 
+}
+
+
+.modalidad-presencial, 
+.modalidad-semi-presencial {
+    background: #f9f9f9; 
+    border-radius: 5px; 
+    padding: 15px; 
+    margin-bottom: 20px;
+}
+
+.detalles-modalidad h2 {
+    margin-top: 30px; 
+}
+
+.detalles-modalidad p {
+    margin-bottom: 15px;
+}
+
+
+
+/* main preguntas frecuentes */
+
+#main-preguntas-frecuentes {
+    max-width: 900px; 
+    margin: auto; 
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+}
+
+
+.faq h1 {
+    text-align: center; 
+    font-family: Impact, sans-serif;
+    font-size: 45px;
+    color: #348337;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+
+.faq-item {
+    margin-bottom: 20px; 
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+
+
+
+.faq-question h2 {
+    color: #333; 
+    text-align: left;
+    margin: 0; 
+    font-weight: bolder;
+}
+
+
+.faq-answer p {
+    margin: 5px 0;
+    background: #f9f9f9;
+    border-left: 3px solid #4CAF50; 
+    padding: 10px;
+    border-radius: 5px; 
+}
+
+
+
+
+/* main requisitos de matricula */
+#main-requisitos-matricula {
+    max-width: 900px; 
+    margin: auto; 
+    background: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+}
+
+
+.requisitos-matricula h2 {
+    text-align: center; 
+    color: #4CAF50;
+    font-weight: 600; 
+    margin-bottom: 20px;
+}
+
+
+.estudiantes-antiguos, .estudiantes-nuevos {
+    margin-bottom: 30px;
+}
+
+
+.requisito {
+    margin-bottom: 15px; 
+    padding: 10px; 
+    background: #f9f9f9; 
+    border-left: 3px solid #4CAF50;
+    border-radius: 5px; 
+}
+
+.requisito h4 {
+    margin: 0; 
+    color: #333;
+}
+
+
+.requisito p {
+    margin: 5px 0; 
+}
+
+
+
+
+/* main sobre nosotros*/
+
+#main-sobre-nosotros {
+    max-width: 900px; 
+    margin: auto; 
+    background: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+}
+
+.bienvenida h1 {
+    text-align: center; 
+    font-family: Impact, sans-serif;
+    font-size: 45px;
+    color: #348337;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.bienvenida h3 {
+    text-align: start;
+
+    margin-bottom: 20px; 
+}
+
+.area {
+    margin-bottom: 15px;
+    padding: 10px; 
+    background: #f9f9f9; 
+    border-left: 3px solid #4CAF50; 
+    border-radius: 5px; 
+}
+
+
+
+
+
+
+/* main transparencia */
+#main-transparencia {
+    max-width: 900px; 
+    margin: auto; 
+    background: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+}
+
+
+
+.informacion-transparencia {
+    margin-bottom: 20px; 
+}
+
+
+.item-transparencia {
+    margin-bottom: 10px; 
+    padding: 10px; 
+    background: #f9f9f9; 
+    border-left: 3px solid #4CAF50; 
+    border-radius: 5px; 
+}
+
+.item-transparencia a {
+    text-decoration: none; 
+    color: #4CAF50; 
+    font-weight: bold; 
+}
+
+.item-transparencia a:hover {
+    text-decoration: underline; 
+}
+
+
+.comunicado-imagen {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos del aside */
+#al-lado-info {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrar verticalmente */
+  background-color: #a5d6a7;
+  color: #000000;
+  font-family: Verdana, Tahoma, sans-serif;
+  padding: 10px; 
+  margin: 0;
+  flex: 1;
+}
+
+.aside-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.aside-info h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 7px;
+  word-spacing: 10px;
+  text-align: center;
+}
+
+.aside-info h4 {
+  text-align: center;
+  word-spacing: 5px;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-list li {
+  background-color: #f2f2f2;
+}
+
+.contact-item {
+  border: 1px #000000 solid;
+  margin: 10px;
+  padding: 1px 50px;
+  border-radius: 15px;
+}
+
+/* Estilos del pie de página */
+
+#pie-pagina {
+  display: flex;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.email {
+  font-weight: bolder;
+  font-family: "Arial Narrow Bold", sans-serif;
+  font-size: medium;
+}
+
+.copyright {
+  font-weight: lighter;
+}
+
+/* Estilos del contenedor */
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
