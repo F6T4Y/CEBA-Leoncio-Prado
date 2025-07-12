@@ -19,10 +19,16 @@
       content="colegio Ceba Leoncio Prado, matrícula, costos de pensión, educación, servicios escolares, actividades educativas"
     />
     <link rel="stylesheet" href="./assets/css/ceba.css" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   </head>
 
   <body>
@@ -146,6 +152,11 @@
                     >Documentos de gestión</a
                   >
                 </li>
+                <li class="sub-item">
+                  <a class="sub-link" href="./pago-pension.html"
+                    >Pago de Pensiones</a
+                  >
+                </li>
               </ul>
             </li>
             <li class="nav-item">
@@ -173,13 +184,45 @@
               alt="Insignia Ceba Leoncio Prado"
               width="400"
             />
-            <h1>
-              BIENVENIDOS AL CEBA LEONCIO PRADO
-            </h1>
+            <h1>BIENVENIDOS AL CEBA LEONCIO PRADO</h1>
           </article>
 
           <hr />
 
+          <div id="reserva-Matricula" class="reserva-section">
+            <h2>Reserva de Matrícula</h2>
+            <form id="formBoleta">
+              <label for="nombre">Nombre del estudiante:</label><br />
+              <input type="text" id="nombre" name="nombre" required /><br />
+
+              <label for="grado">Grado al que postula:</label><br />
+              <select id="grado" name="grado" required>
+                <option value="1°">1°</option>
+                <option value="2°">2°</option>
+                <option value="3°">3°</option>
+                <option value="4°">4°</option>
+              </select>
+              <br />
+
+              <label for="monto">Monto de matrícula (S/):</label><br />
+              <input
+                type="number"
+                id="monto"
+                name="monto"
+                value="100"
+                max="300"
+                min="100"
+                inert=""
+                required
+              /><br />
+
+              <br />
+              <button type="submit">Generar Boleta PDF</button>
+            </form>
+          </div>
+          <script src="./assets/js/reserva-matricula.js"></script>
+
+          <hr />
           <article class="programs">
             <h2>PROGRAMAS DIVERSIFICADOS</h2>
             <ol>
